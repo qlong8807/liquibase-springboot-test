@@ -1,0 +1,544 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet author="apple (generated)" id="1544085688708-1">
+        <createTable tableName="BUSINESS_TYPE_INFO">
+            <column name="ID" remarks="id" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MOULD_ID" remarks="模板id" type="VARCHAR2(32 BYTE)"/>
+            <column name="BUSINESS_TYPE" remarks="业务类型" type="VARCHAR2(50 BYTE)"/>
+            <column name="SONBUSINESS_TYPE" remarks="子业务类型" type="VARCHAR2(50 BYTE)"/>
+            <column name="BASE_NAME" remarks="业务类型名称" type="VARCHAR2(50 BYTE)"/>
+            <column name="SONBASE_NAME" remarks="子业务类型名称" type="VARCHAR2(50 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-2">
+        <createTable remarks="商户账户表" tableName="CAS_MERCHANTACC">
+            <column name="ID" remarks="编号" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="PK_CAS_MERCHANTACC_ID"/>
+            </column>
+            <column name="MERCHANTID" remarks="商户账户ID" type="VARCHAR2(20 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MERCHANTACCNO" remarks="商户号" type="VARCHAR2(50 BYTE)"/>
+            <column name="BALANCE" remarks="账户余额 单位元" type="NUMBER(12, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" remarks="账户状态 0：正常&#10;1：冻结&#10;2：注销" type="VARCHAR2(2 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATEDATETIME" remarks="创建日期" type="date"/>
+            <column name="CREATEUSER" remarks="创建人员" type="VARCHAR2(50 BYTE)"/>
+            <column name="UPDATEDATETIME" remarks="修改日期" type="date"/>
+            <column name="UPDATEUSER" remarks="修改人员" type="VARCHAR2(50 BYTE)"/>
+            <column name="CHECKCODE" remarks="验证码 用账户号、子账户号和账户余额进行计算" type="VARCHAR2(16 BYTE)"/>
+            <column name="NAME" remarks="账户名称" type="VARCHAR2(200 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-3">
+        <createTable remarks="商户信息表" tableName="CAS_MERCHANTINFO">
+            <column name="ID" remarks="编号" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="PK_CAS_MERCHANTINFO_ID"/>
+            </column>
+            <column name="MERCHANTID" remarks="商户账户ID" type="VARCHAR2(20 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MERCHANTNAME" remarks="商户名称" type="VARCHAR2(200 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BRANDS" remarks="品牌名称" type="VARCHAR2(100 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MERCHANTCODE" remarks="营业执照号码" type="VARCHAR2(50 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MERCHANTTYPE" remarks="商户类别 1：个体商户&#10;2：标准商户" type="VARCHAR2(2 BYTE)"/>
+            <column name="ISAGENT" remarks="是否代理关系 0：不是&#10;1：是" type="VARCHAR2(2 BYTE)"/>
+            <column name="AGENTID" remarks="代理商 当isAgent=1时必填" type="VARCHAR2(50 BYTE)"/>
+            <column name="LEGALNAME" remarks="法人姓名" type="VARCHAR2(50 BYTE)"/>
+            <column name="LEGALIDTYPE" remarks="法人证件类别" type="VARCHAR2(2 BYTE)"/>
+            <column name="LEGALIDCODE" remarks="法人证件号码" type="VARCHAR2(50 BYTE)"/>
+            <column name="EMAIL" remarks="邮箱地址" type="VARCHAR2(100 BYTE)"/>
+            <column name="PHONE" remarks="联系电话" type="VARCHAR2(20 BYTE)"/>
+            <column name="PROVINCE" remarks="营业地区（省）" type="VARCHAR2(50 BYTE)"/>
+            <column name="CITY" remarks="营业地区（市）" type="VARCHAR2(50 BYTE)"/>
+            <column name="AREA" remarks="营业地区（区县）" type="VARCHAR2(50 BYTE)"/>
+            <column name="INDUSTRYTYPE" remarks="行业类别" type="VARCHAR2(50 BYTE)"/>
+            <column name="BUSINESSTYPE" remarks="业务类型" type="VARCHAR2(50 BYTE)"/>
+            <column name="ADDRESS" remarks="联系地址" type="VARCHAR2(200 BYTE)"/>
+            <column name="GROUPID" remarks="所属集团" type="VARCHAR2(50 BYTE)"/>
+            <column name="SERVICERATE" remarks="服务费率" type="VARCHAR2(50 BYTE)"/>
+            <column name="BANKNAME" remarks="结算银行（开户行名称）" type="VARCHAR2(50 BYTE)"/>
+            <column name="BANKACCNAME" remarks="账户名称" type="VARCHAR2(50 BYTE)"/>
+            <column name="BANKACCNO" remarks="结算账号（单位银行账户）" type="VARCHAR2(50 BYTE)"/>
+            <column name="CONTRACTTIME" remarks="签约时间" type="date"/>
+            <column name="CONTRACTSTARTTIME" remarks="合同有效期间（开始日期）" type="date"/>
+            <column name="CONTRACTENDTIME" remarks="合同有效期间（结束日期）" type="date"/>
+            <column name="CREATEDATETIME" remarks="创建日期" type="date"/>
+            <column name="CREATEUSER" remarks="创建人员" type="VARCHAR2(50 BYTE)"/>
+            <column name="UPDATEDATETIME" remarks="修改日期" type="date"/>
+            <column name="UPDATEUSER" remarks="修改人员" type="VARCHAR2(50 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-4">
+        <createTable remarks="商户设备表" tableName="CAS_MERCHANTTRM">
+            <column name="ID" remarks="编号" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="PK_CAS_MERCHANTTRM_ID"/>
+            </column>
+            <column name="SUBMERCHANTID" remarks="商户应用账户ID" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MERCHANTID" remarks="商户账户ID" type="VARCHAR2(20 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TERMINALID" remarks="终端ID" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DEVICENO" remarks="设备号" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ENABLETIME" remarks="启用时间" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BALANCE" remarks="账户余额 单位元" type="NUMBER(12, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATEDATETIME" remarks="创建日期" type="date"/>
+            <column name="CREATEUSER" remarks="创建人员" type="VARCHAR2(50 BYTE)"/>
+            <column name="UPDATEDATETIME" remarks="修改日期" type="date"/>
+            <column name="UPDATEUSER" remarks="修改人员" type="VARCHAR2(50 BYTE)"/>
+            <column name="CHECKCODE" remarks="验证码 用账户号、子账户号和账户余额进行计算" type="VARCHAR2(16 BYTE)"/>
+            <column name="MERCHANTACCNO" remarks="商户账户号" type="VARCHAR2(20 BYTE)"/>
+            <column name="USEDFLAG" remarks="账户状态 0：启用&#10;1：停用" type="VARCHAR2(2 BYTE)"/>
+            <column name="SIMCARDFLAG" remarks="通讯卡标志：0：无，1：有" type="VARCHAR2(2 BYTE)"/>
+            <column name="SIMCARDNO" remarks="通讯卡号" type="VARCHAR2(32 BYTE)"/>
+            <column name="SAMCARDNO" remarks="管理卡号" type="VARCHAR2(32 BYTE)"/>
+            <column name="MACHINEMODEL" remarks="设备型号" type="VARCHAR2(32 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-5">
+        <createTable remarks="商户设备表变更表" tableName="CAS_MERCHANTTRM_RECORD">
+            <column name="ID" remarks="id" type="VARCHAR2(32 BYTE)"/>
+            <column name="PID" remarks="对应设备记录ID" type="VARCHAR2(32 BYTE)"/>
+            <column name="MERCHANTACCNO" remarks="商户账户号" type="VARCHAR2(20 BYTE)"/>
+            <column name="TERMINALID" remarks="终端号" type="VARCHAR2(32 BYTE)"/>
+            <column name="USEDFLAG" remarks="状态 0：启用，1：停用" type="VARCHAR2(2 BYTE)"/>
+            <column name="DEVICENO" remarks="设备号" type="VARCHAR2(32 BYTE)"/>
+            <column name="REASON" remarks="变更原因" type="VARCHAR2(50 BYTE)"/>
+            <column name="UPDATETIME" remarks="变更时间" type="date"/>
+            <column name="CREATETIME" remarks="创建时间" type="date"/>
+            <column name="CREATEUSER" remarks="创建者" type="VARCHAR2(50 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-6">
+        <createTable remarks="注销处理记录表" tableName="LOGOFF_DEAL_RECORDS">
+            <column name="ID" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="SYS_C0024045"/>
+            </column>
+            <column name="NUM" remarks="序号" type="NUMBER(2, 0)"/>
+            <column name="DEAL_STEP" remarks="处理环节" type="VARCHAR2(128 BYTE)"/>
+            <column name="DEAL_JOB" remarks="处理岗位" type="VARCHAR2(128 BYTE)"/>
+            <column name="DEAL_MAN" remarks="处理人" type="VARCHAR2(128 BYTE)"/>
+            <column name="DEAL_DATE" remarks="处理时间" type="VARCHAR2(32 BYTE)"/>
+            <column name="DEAL_TYPE" remarks="处理方式" type="VARCHAR2(32 BYTE)"/>
+            <column name="DEAL_COMMENT" remarks="处理意见" type="VARCHAR2(512 BYTE)"/>
+            <column name="AUDIT_ID" remarks="审核表ID" type="VARCHAR2(32 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-7">
+        <createTable remarks="商户审核信息表" tableName="MERCHANT_AUDIT_INFO">
+            <column name="ID" remarks="主键标识" type="VARCHAR2(32 BYTE)"/>
+            <column name="MER_RELATE_ID" remarks="关联主账户ID" type="VARCHAR2(32 BYTE)"/>
+            <column name="MER_BACK_ID" remarks="主账户备份表ID" type="VARCHAR2(32 BYTE)"/>
+            <column name="AUDIT_STATUS" remarks="审核状态 0 待审核,1 审核通过,2 审核失败,3 主账户注销,4 已保存，5 已驳回,6 审核失败待确认" type="VARCHAR2(2 BYTE)"/>
+            <column name="APPLY_STATUS" remarks="申请类型 0 新增主商户, 1 主商户注销, 2 新增子账户, 3 子账户注销, 4 登记信息变更, 5 结算账户变更, 6 结算费率变更, 7 联系信息变更,8 新增特殊商户,9 押金及其他费用变更" type="VARCHAR2(2 BYTE)"/>
+            <column name="AUDIT_REMARK" remarks="审核备注" type="VARCHAR2(200 BYTE)"/>
+            <column name="AUDIT_MAN" remarks="审核人" type="VARCHAR2(50 BYTE)"/>
+            <column name="AUDIT_TIME" remarks="审核时间" type="VARCHAR2(14 BYTE)"/>
+            <column name="LAST_UPDATE_MAN" remarks="申请人" type="VARCHAR2(50 BYTE)"/>
+            <column name="LAST_UPDATE_TIME" remarks="最近修改时间" type="VARCHAR2(14 BYTE)"/>
+            <column name="CREATE_TIME" remarks="申请时间" type="VARCHAR2(14 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-8">
+        <createTable remarks="主商户变更记录表" tableName="MERCHANT_CHANGE_RECORD">
+            <column name="ID" remarks="主键ID" type="VARCHAR2(32 BYTE)"/>
+            <column name="COLUMN_CODE" remarks="变更列名" type="VARCHAR2(20 BYTE)"/>
+            <column name="COLUMN_DESC" remarks="列名备注" type="VARCHAR2(20 BYTE)"/>
+            <column name="INFO_ID" remarks="关联INFO主表ID" type="VARCHAR2(32 BYTE)"/>
+            <column name="CREATED_TIME" remarks="创建时间" type="VARCHAR2(30 BYTE)"/>
+            <column name="CREATED_MAN" remarks="创建人" type="VARCHAR2(20 BYTE)"/>
+            <column name="CHANGE_KIND" remarks="变更分类(0 基本信息 1 结算账户 2结算费率 3联系信息,4 押金及其他费用)" type="VARCHAR2(2 BYTE)"/>
+            <column name="OLD_VAL" type="CLOB"/>
+            <column name="NEW_VAL" type="CLOB"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-9">
+        <createTable remarks="主商户信息备份表" tableName="MERCHANT_MANAGER_INFO">
+            <column name="ID" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="SYS_C0022598"/>
+            </column>
+            <column name="COMPANY_NAME" remarks="公司名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="BRAND_NAME" remarks="品牌名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="LICENSE_TYPE" remarks="执照类型" type="VARCHAR2(80 BYTE)"/>
+            <column name="LICENSE_NO" remarks="营业执照号码" type="VARCHAR2(50 BYTE)"/>
+            <column name="LICENSE_DATE" remarks="执照有效期截止日" type="VARCHAR2(14 BYTE)"/>
+            <column name="OPERATE" remarks="经营范围" type="VARCHAR2(80 BYTE)"/>
+            <column name="CAPITAL" remarks="注册资本金" type="VARCHAR2(80 BYTE)"/>
+            <column name="CAPITAL_TYPE" remarks="注册资本币种" type="VARCHAR2(50 BYTE)"/>
+            <column name="TENANTS_TYPE" remarks="商户类别 1：个体商户 2：标准商户" type="VARCHAR2(50 BYTE)"/>
+            <column name="RELATIONSHIP" remarks="代理关系  0：否 1 是" type="VARCHAR2(50 BYTE)"/>
+            <column name="TRADING_AREA" remarks="商圈" type="VARCHAR2(80 BYTE)"/>
+            <column name="AGENT" remarks="代理商" type="VARCHAR2(80 BYTE)"/>
+            <column name="PERSON_NAME" remarks="法人姓名" type="VARCHAR2(80 BYTE)"/>
+            <column name="PERSON_CERTIFICATE" remarks="法人证件类型" type="VARCHAR2(80 BYTE)"/>
+            <column name="CERTIFICATE_NO" remarks="法人证件号码" type="VARCHAR2(60 BYTE)"/>
+            <column name="EMAIL" remarks="邮箱地址" type="VARCHAR2(80 BYTE)"/>
+            <column name="TELL" remarks="联系电话" type="VARCHAR2(20 BYTE)"/>
+            <column name="PERSON_CER_DATE" remarks="法人证件有效期截止日" type="VARCHAR2(50 BYTE)"/>
+            <column name="SHAREHOLDER_NAME" remarks="控股股东或实际控制人姓名" type="VARCHAR2(80 BYTE)"/>
+            <column name="SHAREHOLDER_TYPE" remarks="控股股东或实际控制人证件种类" type="VARCHAR2(21 BYTE)"/>
+            <column name="SHAREHOLDER_NO" remarks="控股股东或实际控制人证件号码" type="VARCHAR2(50 BYTE)"/>
+            <column name="SHAREHOLDER_DATE" remarks="控股股东或实际控制人证件有效期截止日" type="VARCHAR2(14 BYTE)"/>
+            <column name="BUSPERSON_NAME" remarks="授权办理业务人员姓名" type="VARCHAR2(80 BYTE)"/>
+            <column name="BUSPERSON_TYPE" remarks="授权办理业务人员证件种类" type="VARCHAR2(50 BYTE)"/>
+            <column name="BUSPERSON_NO" remarks="授权办理业务人员证件号码" type="VARCHAR2(80 BYTE)"/>
+            <column name="BUSPERSON_DATE" remarks="授权办理业务人员证件有效期截止日" type="VARCHAR2(20 BYTE)"/>
+            <column name="REGION" remarks="营业地区(省)" type="VARCHAR2(80 BYTE)"/>
+            <column name="INDUSTRY_TYPE" remarks="行业类别" type="VARCHAR2(50 BYTE)"/>
+            <column name="BUS_TYPE" remarks="业务类型" type="VARCHAR2(255 BYTE)"/>
+            <column name="COMMUNICATION" remarks="通讯卡单价" type="VARCHAR2(80 BYTE)"/>
+            <column name="DEPOSIT" remarks="押金及其他费用" type="VARCHAR2(80 BYTE)"/>
+            <column name="ADDRESS" remarks="联系地址" type="VARCHAR2(200 BYTE)"/>
+            <column name="CLIQUE" remarks="所属集团" type="VARCHAR2(80 BYTE)"/>
+            <column name="FEE" remarks="服务费率" type="VARCHAR2(200 BYTE)"/>
+            <column name="BANK" remarks="结算银行" type="VARCHAR2(200 BYTE)"/>
+            <column name="NAME" remarks="账户名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="ACCOUNT_NUM" remarks="结算账号" type="VARCHAR2(80 BYTE)"/>
+            <column name="CONTIME" remarks="签约时间" type="VARCHAR2(14 BYTE)"/>
+            <column name="CONDATE" remarks="合同有效期" type="VARCHAR2(14 BYTE)"/>
+            <column name="TENANTS_NO" remarks="商户号" type="VARCHAR2(80 BYTE)"/>
+            <column name="LAST_UPDATE_TIME" remarks="最后修改时间" type="VARCHAR2(14 BYTE)"/>
+            <column name="INITIAL_SUBMISSION_TIME" remarks="初次提交时间" type="VARCHAR2(14 BYTE)"/>
+            <column name="LAST_UPDATE_MAN" remarks="最后修改人" type="VARCHAR2(80 BYTE)"/>
+            <column name="TENANT_STATUS" remarks="商户状态 0 新增待审核, 1 注销待审核, 2 已注销, 3 正常" type="VARCHAR2(20 BYTE)"/>
+            <column name="CITY" remarks="营业地区(地级市)" type="VARCHAR2(50 BYTE)"/>
+            <column name="COUNTY" remarks="营业地区(区、县级市、县)" type="VARCHAR2(50 BYTE)"/>
+            <column name="CONDATE2" remarks="合同有效期2" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_TYPE" remarks="费率种类" type="VARCHAR2(80 BYTE)"/>
+            <column name="FEE_SEC1" remarks="费率区间1" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_SEC2" remarks="费率区间2" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_SEC3" remarks="费率区间3" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_VAL1" remarks="费率1" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_VAL2" remarks="费率2" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_VAL3" remarks="费率3" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_DISCOUNT_TYPE" type="VARCHAR2(50 BYTE)"/>
+            <column name="IDENTITY_PATH" remarks="法人身份证张正面" type="CLOB"/>
+            <column name="LICENSE_PATH" remarks="营业执照" type="CLOB"/>
+            <column name="CON_PATH" remarks="结算合同照片" type="CLOB"/>
+            <column name="ADD_PATH" remarks="营业场地照片" type="CLOB"/>
+            <column name="IDENTITY_PATH2" remarks="法人身份证张反面" type="CLOB"/>
+            <column name="BANK_NUM" remarks="开户行联行号" type="VARCHAR2(80 BYTE)"/>
+            <column name="CANCEL_REASON" remarks="注销理由" type="VARCHAR2(400 BYTE)"/>
+            <column name="IS_SETTLEMENT" remarks="是否统一结算 1：是 0否" type="VARCHAR2(1 BYTE)"/>
+            <column name="ISSPECIAL" remarks="是否是特殊商户，0否，1是" type="VARCHAR2(10 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-10">
+        <createTable remarks="主商户信息实表" tableName="MERCHANT_MANAGER_REAL">
+            <column name="ID" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="SYS_C0022644"/>
+            </column>
+            <column name="COMPANY_NAME" remarks="公司名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="BRAND_NAME" remarks="品牌名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="LICENSE_TYPE" remarks="执照类型" type="VARCHAR2(40 BYTE)"/>
+            <column name="LICENSE_NO" remarks="营业执照号码" type="VARCHAR2(50 BYTE)"/>
+            <column name="LICENSE_DATE" remarks="执照有效期截止日" type="VARCHAR2(14 BYTE)"/>
+            <column name="OPERATE" remarks="经营范围" type="VARCHAR2(80 BYTE)"/>
+            <column name="CAPITAL" remarks="注册资本金" type="VARCHAR2(80 BYTE)"/>
+            <column name="CAPITAL_TYPE" remarks="注册资本币种" type="VARCHAR2(50 BYTE)"/>
+            <column name="TENANTS_TYPE" remarks="商户类别 1：个体商户 2：标准商户" type="VARCHAR2(50 BYTE)"/>
+            <column name="RELATIONSHIP" remarks="代理关系  0：否 1 是" type="VARCHAR2(50 BYTE)"/>
+            <column name="TRADING_AREA" remarks="商圈" type="VARCHAR2(80 BYTE)"/>
+            <column name="AGENT" remarks="代理商" type="VARCHAR2(80 BYTE)"/>
+            <column name="PERSON_NAME" remarks="法人姓名" type="VARCHAR2(80 BYTE)"/>
+            <column name="PERSON_CERTIFICATE" remarks="法人证件类型" type="VARCHAR2(80 BYTE)"/>
+            <column name="CERTIFICATE_NO" remarks="法人证件号码" type="VARCHAR2(60 BYTE)"/>
+            <column name="EMAIL" remarks="邮箱地址" type="VARCHAR2(80 BYTE)"/>
+            <column name="TELL" remarks="联系电话" type="VARCHAR2(20 BYTE)"/>
+            <column name="PERSON_CER_DATE" remarks="法人证件有效期截止日" type="VARCHAR2(50 BYTE)"/>
+            <column name="SHAREHOLDER_NAME" remarks="控股股东或实际控制人姓名" type="VARCHAR2(80 BYTE)"/>
+            <column name="SHAREHOLDER_TYPE" remarks="控股股东或实际控制人证件种类" type="VARCHAR2(20 BYTE)"/>
+            <column name="SHAREHOLDER_NO" remarks="控股股东或实际控制人证件号码" type="VARCHAR2(50 BYTE)"/>
+            <column name="SHAREHOLDER_DATE" remarks="控股股东或实际控制人证件有效期截止日" type="VARCHAR2(14 BYTE)"/>
+            <column name="BUSPERSON_NAME" remarks="授权办理业务人员姓名" type="VARCHAR2(80 BYTE)"/>
+            <column name="BUSPERSON_TYPE" remarks="授权办理业务人员证件种类" type="VARCHAR2(50 BYTE)"/>
+            <column name="BUSPERSON_NO" remarks="授权办理业务人员证件号码" type="VARCHAR2(80 BYTE)"/>
+            <column name="BUSPERSON_DATE" remarks="授权办理业务人员证件有效期截止日" type="VARCHAR2(20 BYTE)"/>
+            <column name="REGION" remarks="营业地区(省)" type="VARCHAR2(80 BYTE)"/>
+            <column name="INDUSTRY_TYPE" remarks="行业类别" type="VARCHAR2(50 BYTE)"/>
+            <column name="BUS_TYPE" remarks="业务类型" type="VARCHAR2(225 BYTE)"/>
+            <column name="COMMUNICATION" remarks="通讯卡单价" type="VARCHAR2(80 BYTE)"/>
+            <column name="DEPOSIT" remarks="押金及其他费用" type="VARCHAR2(80 BYTE)"/>
+            <column name="ADDRESS" remarks="联系地址" type="VARCHAR2(200 BYTE)"/>
+            <column name="CLIQUE" remarks="所属集团" type="VARCHAR2(80 BYTE)"/>
+            <column name="FEE" remarks="服务费率" type="VARCHAR2(200 BYTE)"/>
+            <column name="BANK" remarks="结算银行" type="VARCHAR2(200 BYTE)"/>
+            <column name="NAME" remarks="账户名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="ACCOUNT_NUM" remarks="结算账号" type="VARCHAR2(80 BYTE)"/>
+            <column name="CONTIME" remarks="签约时间" type="VARCHAR2(14 BYTE)"/>
+            <column name="CONDATE" remarks="合同有效期" type="VARCHAR2(14 BYTE)"/>
+            <column name="TENANTS_NO" remarks="商户号" type="VARCHAR2(80 BYTE)"/>
+            <column name="LAST_UPDATE_TIME" remarks="最后修改时间" type="VARCHAR2(14 BYTE)"/>
+            <column name="INITIAL_SUBMISSION_TIME" remarks="初次提交时间" type="VARCHAR2(14 BYTE)"/>
+            <column name="LAST_UPDATE_MAN" remarks="最后修改人" type="VARCHAR2(80 BYTE)"/>
+            <column name="TENANT_STATUS" remarks="商户状态 1 注销待审核 2 已注销, 3 正常，4 待提交" type="VARCHAR2(20 BYTE)"/>
+            <column name="CITY" remarks="营业地区(地级市)" type="VARCHAR2(50 BYTE)"/>
+            <column name="COUNTY" remarks="营业地区(区、县级市、县)" type="VARCHAR2(50 BYTE)"/>
+            <column name="CONDATE2" remarks="合同有效期2" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_TYPE" remarks="费率种类" type="VARCHAR2(80 BYTE)"/>
+            <column name="FEE_SEC1" remarks="费率区间1" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_SEC2" remarks="费率区间2" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_SEC3" remarks="费率区间3" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_VAL1" remarks="费率1" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_VAL2" remarks="费率2" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_VAL3" remarks="费率3" type="VARCHAR2(20 BYTE)"/>
+            <column name="FEE_DISCOUNT_TYPE" type="VARCHAR2(50 BYTE)"/>
+            <column name="IDENTITY_PATH" remarks="法人身份证张正面" type="CLOB"/>
+            <column name="LICENSE_PATH" remarks="营业执照" type="CLOB"/>
+            <column name="CON_PATH" remarks="结算合同照片" type="CLOB"/>
+            <column name="ADD_PATH" remarks="营业场地照片" type="CLOB"/>
+            <column name="IDENTITY_PATH2" remarks="法人身份证张反面" type="CLOB"/>
+            <column name="BANK_NUM" remarks="开户行联行号" type="VARCHAR2(50 BYTE)"/>
+            <column name="CANCEL_REASON" remarks="注销理由" type="VARCHAR2(400 BYTE)"/>
+            <column name="IS_SETTLEMENT" remarks="是否统一结算 1：是 0否" type="VARCHAR2(1 BYTE)"/>
+            <column name="ISSPECIAL" remarks="是否是特殊商户，0否，1是" type="VARCHAR2(10 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-11">
+        <createTable tableName="MERCHANT_RATE_SETTING">
+            <column name="ID" remarks="主键" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RATE_NAME" remarks="费率名称" type="VARCHAR2(40 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RATE_TYPE" remarks="费率类型" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PARAMETERS" remarks="参数" type="VARCHAR2(40 BYTE)"/>
+            <column name="BUSINESS_TYPE" remarks="业务类型" type="VARCHAR2(32 BYTE)"/>
+            <column name="SUB_BUSINESS_TYPE" remarks="子业务类型" type="VARCHAR2(32 BYTE)"/>
+            <column name="MERCHANT_ID" remarks="关联商户id" type="VARCHAR2(32 BYTE)"/>
+            <column name="USED_FLAG" remarks="启用标识0：启用，1：禁用" type="VARCHAR2(1 BYTE)"/>
+            <column name="RATE_CODE" remarks="费率编码" type="VARCHAR2(32 BYTE)"/>
+            <column name="BUSINESS_TYPE_NAME" remarks="业务类型名称" type="VARCHAR2(100 BYTE)"/>
+            <column name="SUB_BUSINESS_TYPE_NAME" remarks="子业务类型名称" type="VARCHAR2(100 BYTE)"/>
+            <column name="RATE_TYPE_NAME" remarks="费率类型名称" type="VARCHAR2(100 BYTE)"/>
+            <column name="RATE_BRIEF" remarks="参数说明" type="VARCHAR2(400 BYTE)"/>
+            <column name="RATE_AUDIT_ID" remarks="关联审核表id" type="VARCHAR2(32 BYTE)"/>
+            <column name="UPDATE_FLAG" remarks="更新标志：0新增，1修改，2删除" type="VARCHAR2(1 BYTE)"/>
+            <column name="RATE_REAL_ID" remarks="关联费率真实表id" type="VARCHAR2(32 BYTE)"/>
+            <column name="SETTLEMENT_MODEL" remarks="结算时间" type="VARCHAR2(2 BYTE)"/>
+            <column name="SETTLEMENT_MODEL_DESC" remarks="结算时间说明" type="VARCHAR2(50 BYTE)"/>
+            <column name="CUTOFF_TIME" remarks="清分限制时间" type="VARCHAR2(2 BYTE)"/>
+            <column name="CUTOFF_TIME_DESC" remarks="清分限制时间说明" type="VARCHAR2(50 BYTE)"/>
+            <column name="SETTLE_MODEL" remarks="结算周期" type="VARCHAR2(2 BYTE)"/>
+            <column name="SETTLE_MODEL_DESC" remarks="结算周期说明" type="VARCHAR2(20 BYTE)"/>
+            <column name="ENABLE_START_TIME" remarks="生效开始时间" type="VARCHAR2(8 BYTE)"/>
+            <column name="ENABLE_END_TIME" remarks="生效结束时间" type="VARCHAR2(8 BYTE)"/>
+            <column name="MOULD_ID" remarks="模板id" type="VARCHAR2(32 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-12">
+        <createTable tableName="MERCHANT_RATE_SETTING_REAL">
+            <column name="ID" remarks="主键" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RATE_NAME" remarks="费率名称" type="VARCHAR2(40 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RATE_TYPE" remarks="费率类型" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PARAMETERS" remarks="参数" type="VARCHAR2(40 BYTE)"/>
+            <column name="BUSINESS_TYPE" remarks="业务类型" type="VARCHAR2(32 BYTE)"/>
+            <column name="SUB_BUSINESS_TYPE" remarks="子业务类型" type="VARCHAR2(32 BYTE)"/>
+            <column name="MERCHANT_ID" remarks="关联商户id" type="VARCHAR2(32 BYTE)"/>
+            <column name="USED_FLAG" remarks="启用标识0：启用，1：禁用" type="VARCHAR2(1 BYTE)"/>
+            <column name="RATE_CODE" remarks="费率编码" type="VARCHAR2(32 BYTE)"/>
+            <column name="BUSINESS_TYPE_NAME" remarks="业务类型名称" type="VARCHAR2(100 BYTE)"/>
+            <column name="SUB_BUSINESS_TYPE_NAME" remarks="子业务类型名称" type="VARCHAR2(100 BYTE)"/>
+            <column name="RATE_TYPE_NAME" remarks="费率类型名称" type="VARCHAR2(100 BYTE)"/>
+            <column name="RATE_BRIEF" remarks="参数说明" type="VARCHAR2(400 BYTE)"/>
+            <column name="RATE_AUDIT_ID" remarks="关联审核表" type="VARCHAR2(32 BYTE)"/>
+            <column name="UPDATE_FLAG" remarks="更新标志" type="VARCHAR2(1 BYTE)"/>
+            <column name="SETTLEMENT_MODEL" remarks="结算时间" type="VARCHAR2(2 BYTE)"/>
+            <column name="SETTLEMENT_MODEL_DESC" remarks="结算时间说明" type="VARCHAR2(50 BYTE)"/>
+            <column name="CUTOFF_TIME" remarks="清分限制时间" type="VARCHAR2(2 BYTE)"/>
+            <column name="CUTOFF_TIME_DESC" remarks="清分限制时间说明" type="VARCHAR2(50 BYTE)"/>
+            <column name="SETTLE_MODEL" remarks="结算周期" type="VARCHAR2(2 BYTE)"/>
+            <column name="SETTLE_MODEL_DESC" remarks="结算周期说明" type="VARCHAR2(20 BYTE)"/>
+            <column name="ENABLE_START_TIME" remarks="生效开始时间" type="VARCHAR2(8 BYTE)"/>
+            <column name="ENABLE_END_TIME" remarks="生效结束时间" type="VARCHAR2(8 BYTE)"/>
+            <column name="MOULD_ID" remarks="模板id" type="VARCHAR2(32 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-13">
+        <createTable tableName="MODIFIED_INFO">
+            <column name="ID" remarks="id" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REVISER" remarks="修改人" type="VARCHAR2(120 BYTE)"/>
+            <column name="PHONE_NUMBER" remarks="手机号" type="VARCHAR2(11 BYTE)"/>
+            <column name="DEPARTMENT" remarks="所属部门" type="VARCHAR2(20 BYTE)"/>
+            <column name="OPERATION" remarks="操作状态：0：新增，1：审核，2：修改，3：注销" type="VARCHAR2(1 BYTE)"/>
+            <column name="OPERATION_TIME" remarks="操作时间" type="VARCHAR2(14 BYTE)"/>
+            <column name="MERCHANT_ID" remarks="商户表id" type="VARCHAR2(32 BYTE)"/>
+            <column name="UPDATE_MODULE" remarks="修改模块" type="VARCHAR2(40 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-14">
+        <createTable tableName="MOULD_INFO">
+            <column name="ID" remarks="模板id" type="VARCHAR2(32 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MOULD_NAME" remarks="模板名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="CREATE_DATE" remarks="创建时间" type="VARCHAR2(8 BYTE)"/>
+            <column name="BUSINESS_TYPE_CONFIGURE" remarks="业务类型配置内容" type="VARCHAR2(500 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-15">
+        <createTable tableName="RATE_CHANGE_RECORD">
+            <column name="ID" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="RATE_CHANGE_RECORD_PK"/>
+            </column>
+            <column name="MERCHANT_ID" remarks="关联商户id" type="VARCHAR2(32 BYTE)"/>
+            <column name="BUSINESS_TYPE" remarks="业务类型" type="VARCHAR2(50 BYTE)"/>
+            <column name="SUB_BUSINESS_TYPE" remarks="子业务类型" type="VARCHAR2(50 BYTE)"/>
+            <column name="UPDATE_FLAG" remarks="更新标志：0新增，1修改，2删除" type="VARCHAR2(20 BYTE)"/>
+            <column name="CREATED_TIME" remarks="创建时间" type="TIMESTAMP(6)"/>
+            <column name="CREATED_MAN" remarks="创建人" type="VARCHAR2(20 BYTE)"/>
+            <column name="RATE_AUDIT_ID" remarks="审核id" type="VARCHAR2(32 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-16">
+        <createTable remarks="子账户信息备份表" tableName="SON_MERCHANT_MANAGER_INFO">
+            <column name="ID" remarks="主键" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="SYS_C0021935"/>
+            </column>
+            <column name="COMPANY_NAME" remarks="公司名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="NAME" remarks="户名" type="VARCHAR2(80 BYTE)"/>
+            <column name="MERCHANT_NAME" remarks="商户名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="INTRODUCTION" remarks="网点简介" type="VARCHAR2(255 BYTE)"/>
+            <column name="START_DATE" remarks="营业时间start" type="VARCHAR2(30 BYTE)"/>
+            <column name="END_DATE" remarks="营业时间end" type="VARCHAR2(30 BYTE)"/>
+            <column name="ADDRESS" remarks="营业地址" type="VARCHAR2(255 BYTE)"/>
+            <column name="TELL" remarks="电话" type="VARCHAR2(20 BYTE)"/>
+            <column name="PARKING" remarks="停车信息" type="VARCHAR2(80 BYTE)"/>
+            <column name="TRAFFIC" remarks="公共交通" type="VARCHAR2(80 BYTE)"/>
+            <column name="DISCOUNT" remarks="优惠活动" type="VARCHAR2(90 BYTE)"/>
+            <column name="INFO_ID" remarks="商户ID" type="VARCHAR2(32 BYTE)"/>
+            <column name="CANCEL_STATUS" remarks="注销状态 0 待审核(默认), 1 注销中, 2 已注销, 3 正常" type="VARCHAR2(10 BYTE)"/>
+            <column name="SON_NET_NO" remarks="子账户网点号" type="VARCHAR2(30 BYTE)"/>
+            <column name="SON_NET_NAME" remarks="子账户网点名称" type="VARCHAR2(30 BYTE)"/>
+            <column name="TERMINAL_NO" remarks="终端号" type="VARCHAR2(30 BYTE)"/>
+            <column name="CANCEL_REASON" remarks="注销理由" type="VARCHAR2(400 BYTE)"/>
+            <column name="LICENCE_PATH" remarks="开户许可证" type="CLOB"/>
+            <column name="TENANTS_NO" remarks="子商户号" type="VARCHAR2(32 BYTE)"/>
+            <column name="SON_MER_RELATE_ID" remarks="与审核表关联的唯一标识" type="VARCHAR2(32 BYTE)"/>
+            <column name="ACCOUNT_NUM" remarks="账号" type="VARCHAR2(200 BYTE)"/>
+            <column name="SETTLEMENT_BANK" remarks="开户行名称" type="VARCHAR2(200 BYTE)"/>
+            <column name="BANK_NUM" remarks="开户行联行号" type="VARCHAR2(80 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-17">
+        <createTable remarks="子账户信息实表" tableName="SON_MERCHANT_MANAGER_REAL">
+            <column name="ID" remarks="主键" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="SYS_C0022646"/>
+            </column>
+            <column name="COMPANY_NAME" remarks="公司名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="NAME" remarks="户名" type="VARCHAR2(80 BYTE)"/>
+            <column name="MERCHANT_NAME" remarks="商户名称" type="VARCHAR2(80 BYTE)"/>
+            <column name="INTRODUCTION" remarks="网点简介" type="VARCHAR2(255 BYTE)"/>
+            <column name="START_DATE" remarks="营业时间start" type="VARCHAR2(30 BYTE)"/>
+            <column name="END_DATE" remarks="营业时间end" type="VARCHAR2(30 BYTE)"/>
+            <column name="ADDRESS" remarks="营业地址" type="VARCHAR2(80 BYTE)"/>
+            <column name="TELL" remarks="电话" type="VARCHAR2(20 BYTE)"/>
+            <column name="PARKING" remarks="停车信息" type="VARCHAR2(80 BYTE)"/>
+            <column name="TRAFFIC" remarks="公共交通" type="VARCHAR2(80 BYTE)"/>
+            <column name="DISCOUNT" remarks="优惠活动" type="VARCHAR2(90 BYTE)"/>
+            <column name="INFO_ID" remarks="商户ID" type="VARCHAR2(32 BYTE)"/>
+            <column name="CANCEL_STATUS" remarks="注销状态 0 待审核(默认), 1 注销中, 2 已注销, 3 正常" type="VARCHAR2(10 BYTE)"/>
+            <column name="SON_NET_NO" remarks="子账户网点号" type="VARCHAR2(30 BYTE)"/>
+            <column name="SON_NET_NAME" remarks="子账户网点名称" type="VARCHAR2(30 BYTE)"/>
+            <column name="TERMINAL_NO" remarks="终端号" type="VARCHAR2(30 BYTE)"/>
+            <column name="CANCEL_REASON" remarks="注销理由" type="VARCHAR2(400 BYTE)"/>
+            <column name="LICENCE_PATH" remarks="开户许可证" type="CLOB"/>
+            <column name="TENANTS_NO" remarks="子商户号" type="VARCHAR2(32 BYTE)"/>
+            <column name="SON_MER_RELATE_ID" remarks="与审核表关联的唯一标识" type="VARCHAR2(32 BYTE)"/>
+            <column name="ACCOUNT_NUM" remarks="账号" type="VARCHAR2(200 BYTE)"/>
+            <column name="SETTLEMENT_BANK" remarks="开户行名称" type="VARCHAR2(200 BYTE)"/>
+            <column name="BANK_NUM" remarks="开户行联行号" type="VARCHAR2(80 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-18">
+        <createTable remarks="数据字典表" tableName="SYS_DICT">
+            <column name="ID" remarks="编号" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="PK_DICT_INFO"/>
+            </column>
+            <column name="TYPE" remarks="字典类别" type="VARCHAR2(32 BYTE)"/>
+            <column name="NAME" remarks="字典名称" type="VARCHAR2(64 BYTE)"/>
+            <column name="CODE" remarks="字典代码" type="VARCHAR2(64 BYTE)"/>
+            <column name="DESCRIPTION" remarks="字典描述" type="VARCHAR2(255 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-19">
+        <createTable remarks="系统权限表" tableName="SYS_RIGHTS">
+            <column name="RIGHTSID" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="SYS_C0021756"/>
+            </column>
+            <column name="RIGHTSNAME" remarks="权限名称" type="VARCHAR2(64 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RIGHTSKEY" remarks="权限编码，多个用英文逗号分隔。" type="VARCHAR2(255 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-20">
+        <createTable remarks="用户表" tableName="SYS_USER">
+            <column name="ID" remarks="编号" type="VARCHAR2(32 BYTE)">
+                <constraints primaryKey="true" primaryKeyName="SYS_C008097"/>
+            </column>
+            <column name="USERNAME" remarks="用户名" type="VARCHAR2(32 BYTE)"/>
+            <column name="PASSWORD" remarks="密码" type="VARCHAR2(32 BYTE)"/>
+            <column name="REALNAME" remarks="真实姓名" type="VARCHAR2(32 BYTE)"/>
+            <column name="AGE" remarks="年龄" type="NUMBER(2, 0)"/>
+            <column name="PHONE" remarks="联系电话" type="VARCHAR2(11 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ADDRESS" remarks="家庭住址" type="VARCHAR2(255 BYTE)"/>
+            <column name="LOGINIP" remarks="最后登录IP" type="VARCHAR2(16 BYTE)"/>
+            <column name="LOGINDATE" remarks="最后登录时间" type="VARCHAR2(20 BYTE)"/>
+            <column name="CREATEBY" remarks="创建人" type="VARCHAR2(32 BYTE)"/>
+            <column name="CREATEDATE" remarks="创建时间" type="VARCHAR2(20 BYTE)"/>
+            <column name="EMAIL" remarks="邮箱" type="VARCHAR2(64 BYTE)"/>
+            <column name="SEX" remarks="性别，0男1女" type="NUMBER(1, 0)"/>
+            <column name="USERRIGHTSID" remarks="用户角色" type="VARCHAR2(64 BYTE)"/>
+            <column name="USERRIGHTSNAME" remarks="用户角色名称" type="VARCHAR2(128 BYTE)"/>
+            <column name="STATUS" remarks="账户状态,0正常,1被冻结" type="VARCHAR2(1 BYTE)"/>
+            <column name="DEPARTMENT" remarks="所属部门" type="VARCHAR2(128 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DEPARTMENTNAME" type="VARCHAR2(128 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="apple (generated)" id="1544085688708-21">
+        <createTable remarks="调用外部接口失败记录表" tableName="TRAN_INFO">
+            <column name="AUDIT_ID" remarks="审核表对应ID" type="VARCHAR2(4000 BYTE)"/>
+            <column name="BACK_ID" remarks="主商户备份表对应ID" type="VARCHAR2(4000 BYTE)"/>
+            <column name="PART_NAME" remarks="发起请求位置" type="VARCHAR2(50 BYTE)"/>
+            <column name="IS_SUCCESS" remarks="是否成功 Y 成功 N 失败" type="VARCHAR2(1 BYTE)"/>
+            <column name="CREATED_TIME" remarks="发起请求时间" type="VARCHAR2(14 BYTE)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

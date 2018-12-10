@@ -1,0 +1,894 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+	<changeSet author="apple (generated)" id="1544089876732-14">
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="23" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="公交轮渡" />
+			<column name="CODE" value="01" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="14" />
+			<column name="TYPE" value="SYSTEM" />
+			<column name="NAME" value="initPwd" />
+			<column name="CODE" value="123456" />
+			<column name="DESCRIPTION" value="初始化密码" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="24" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="地铁" />
+			<column name="CODE" value="02" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="25" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="出租" />
+			<column name="CODE" value="03" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="26" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="公园、物业、水气" />
+			<column name="CODE" value="04" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="27" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="停车、路桥、加油、洗车" />
+			<column name="CODE" value="05" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="28" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="小额消费" />
+			<column name="CODE" value="06" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="29" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="超市、餐饮" />
+			<column name="CODE" value="07" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="30" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="长途客运购票" />
+			<column name="CODE" value="08" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="31" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="钱包消费退货" />
+			<column name="CODE" value="16" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="32" />
+			<column name="TYPE" value="industry_type" />
+			<column name="NAME" value="账户消费退货" />
+			<column name="CODE" value="17" />
+			<column name="DESCRIPTION" value="行业类别" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288058676250e70167633bcd7a0009" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户审核-可操作-修改" />
+			<column name="CODE" value="VERIFY_O_UPDATE" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288058676250e701676340d27c000a" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户审核-可操作-经理" />
+			<column name="CODE" value="VERIFY_O_MANAGER" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288058676250e7016763443a7e000b" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户审核-可操作-设备" />
+			<column name="CODE" value="VERIFY_O_DEVICE" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288058676250e701676344e36c000c" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户审核-可操作-结算" />
+			<column name="CODE" value="VERIFY_O_CLEAR" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288058676250e701676346817e000d" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户审核-可操作-运营" />
+			<column name="CODE" value="VERIFY_O_YUNYING" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288058676250e7016763477afa000e" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户审核-可操作-财务" />
+			<column name="CODE" value="VERIFY_O_FINANCIAL" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="1" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户宣传-可读" />
+			<column name="CODE" value="ANNO_R" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="2" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户宣传-可操作" />
+			<column name="CODE" value="ANNO_O" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="3" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户管理-可读" />
+			<column name="CODE" value="MANAGE_R" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户管理-可操作" />
+			<column name="CODE" value="MANAGE_O" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="5" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户审核-可读" />
+			<column name="CODE" value="VERIFY_R" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="6" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="账户审核-可操作-新增" />
+			<column name="CODE" value="VERIFY_O_ADD" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="7" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="权限管理-可读" />
+			<column name="CODE" value="RIGHTS_R" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="8" />
+			<column name="TYPE" value="RIGHTS" />
+			<column name="NAME" value="权限管理-可操作" />
+			<column name="CODE" value="RIGHTS_O" />
+			<column name="DESCRIPTION" value="权限信息" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="9" />
+			<column name="TYPE" value="DEPARTMENTS" />
+			<column name="NAME" value="系统运营部" />
+			<column name="CODE" value="1" />
+			<column name="DESCRIPTION" value="部门" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="10" />
+			<column name="TYPE" value="DEPARTMENTS" />
+			<column name="NAME" value="智汇公司" />
+			<column name="CODE" value="2" />
+			<column name="DESCRIPTION" value="部门" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="11" />
+			<column name="TYPE" value="DEPARTMENTS" />
+			<column name="NAME" value="支付结算部" />
+			<column name="CODE" value="3" />
+			<column name="DESCRIPTION" value="部门" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="12" />
+			<column name="TYPE" value="DEPARTMENTS" />
+			<column name="NAME" value="营业部对公" />
+			<column name="CODE" value="4" />
+			<column name="DESCRIPTION" value="部门" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="13" />
+			<column name="TYPE" value="DEPARTMENTS" />
+			<column name="NAME" value="维保部" />
+			<column name="CODE" value="5" />
+			<column name="DESCRIPTION" value="部门" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4028800367103e100167103e7d980001" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="结算业务通道服务" />
+			<column name="CODE" value="0401" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4028800367103e100167103ee89b0002" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="结算服务（代收）" />
+			<column name="CODE" value="0402" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4028800367103e100167103f2b5d0003" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="结算服务（代付）" />
+			<column name="CODE" value="0403" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4028800367112b8b0167112dca320002" />
+			<column name="TYPE" value="SettlementModel" />
+			<column name="NAME" value="交易日期" />
+			<column name="CODE" value="1" />
+			<column name="DESCRIPTION" value="结算模式 " />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="33" />
+			<column name="TYPE" value="person_certificate" />
+			<column name="NAME" value="户口本" />
+			<column name="CODE" value="03" />
+			<column name="DESCRIPTION" value="证件类型" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="34" />
+			<column name="TYPE" value="person_certificate" />
+			<column name="NAME" value="工商登记证" />
+			<column name="CODE" value="04" />
+			<column name="DESCRIPTION" value="证件类型" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="35" />
+			<column name="TYPE" value="person_certificate" />
+			<column name="NAME" value="税务登记证" />
+			<column name="CODE" value="05" />
+			<column name="DESCRIPTION" value="证件类型" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="36" />
+			<column name="TYPE" value="person_certificate" />
+			<column name="NAME" value="企业营业执照" />
+			<column name="CODE" value="06" />
+			<column name="DESCRIPTION" value="证件类型" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="37" />
+			<column name="TYPE" value="person_certificate" />
+			<column name="NAME" value="其他证件" />
+			<column name="CODE" value="07" />
+			<column name="DESCRIPTION" value="证件类型" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288058675d1b6101675d260b430002" />
+			<column name="TYPE" value="SYSTEM" />
+			<column name="NAME" value="FILE_UPLOAD_PATH" />
+			<column name="CODE" value="/Users/apple/Documents/test/bc" />
+			<column name="DESCRIPTION" value="文件上传路径C:\\\\bcmange\\\\fileupload" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="15" />
+			<column name="TYPE" value="capital_type" />
+			<column name="NAME" value="注册资本币种" />
+			<column name="CODE" value="人民币" />
+			<column name="DESCRIPTION" value="注册资本币种" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="16" />
+			<column name="TYPE" value="person_certificate" />
+			<column name="NAME" value="身份证" />
+			<column name="CODE" value="01" />
+			<column name="DESCRIPTION" value="证件类型" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="402880036771c313016771c7a4ba0001" />
+			<column name="TYPE" value="trading_area" />
+			<column name="NAME" value="高新商圈" />
+			<column name="CODE" value="2" />
+			<column name="DESCRIPTION" value="高新商圈" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="19" />
+			<column name="TYPE" value="person_certificate" />
+			<column name="NAME" value="护照" />
+			<column name="CODE" value="02" />
+			<column name="DESCRIPTION" value="证件类型" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="20" />
+			<column name="TYPE" value="capital_type" />
+			<column name="NAME" value="注册资本币种" />
+			<column name="CODE" value="美元" />
+			<column name="DESCRIPTION" value="注册资本币种" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003671013d601671039f2fd0005" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="充值自有业务（钱包充值）" />
+			<column name="CODE" value="0101" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003670ae45f01670b1d5d5b0009" />
+			<column name="TYPE" value="CUTOFFTIME" />
+			<column name="NAME" value="当日8:00点至次日8:00" />
+			<column name="CODE" value="1" />
+			<column name="DESCRIPTION" value="结算限制时间：当日8:00点至次日8:00" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003670ae45f01670b1ded22000a" />
+			<column name="TYPE" value="CUTOFFTIME" />
+			<column name="NAME" value="当日0:00至24:00" />
+			<column name="CODE" value="2" />
+			<column name="DESCRIPTION" value="结算限制时间：当日0:00至24:00" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003671013d60167103a56420006" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="充值自由业务（账户充值）" />
+			<column name="CODE" value="0102" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003671013d60167103aa4cf0007" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="充值自助业务" />
+			<column name="CODE" value="0103" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003671013d60167103b22250009" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="充值APP（网厅）业务" />
+			<column name="CODE" value="0104" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003671013d60167103b9f75000a" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="消费公共交通业务" />
+			<column name="CODE" value="0201" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003671013d60167103c4fae000b" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="消费专项结算业务（医疗）" />
+			<column name="CODE" value="020201" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003671013d60167103cb938000c" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="消费专项结算业务（养老）" />
+			<column name="CODE" value="020202" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003671013d60167103d141b000d" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="消费专项结算业务（旅游）" />
+			<column name="CODE" value="020203" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="40288003671013d60167103d57cb000e" />
+			<column name="TYPE" value="busType" />
+			<column name="NAME" value="辅助业务" />
+			<column name="CODE" value="03" />
+			<column name="DESCRIPTION" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4028800367169d420167169e57640002" />
+			<column name="TYPE" value="SettleModel " />
+			<column name="NAME" value="T+0" />
+			<column name="CODE" value="0" />
+			<column name="DESCRIPTION" value="结算周期" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4028800367169d420167169ed5df0003" />
+			<column name="TYPE" value="SettleModel " />
+			<column name="NAME" value="T+1" />
+			<column name="CODE" value="1" />
+			<column name="DESCRIPTION" value="结算周期" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="38" />
+			<column name="TYPE" value="trading_area" />
+			<column name="NAME" value="小寨商圈" />
+			<column name="CODE" value="1" />
+			<column name="DESCRIPTION" value="小寨商圈" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4028800367112b8b0167112f167c0003" />
+			<column name="TYPE" value="SettlementModel" />
+			<column name="NAME" value="清算日期" />
+			<column name="CODE" value="2" />
+			<column name="DESCRIPTION" value="结算模式" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4028800367112b8b0167112f63080004" />
+			<column name="TYPE" value="SettlementModel" />
+			<column name="NAME" value="采集日期" />
+			<column name="CODE" value="3" />
+			<column name="DESCRIPTION" value="结算模式" />
+		</insert>
+		<insert tableName="SYS_DICT">
+			<column name="ID" value="4028800367112b8b0167112fcad00005" />
+			<column name="TYPE" value="SettlementModel" />
+			<column name="NAME" value="其他  " />
+			<column name="CODE" value="4" />
+			<column name="DESCRIPTION" value="结算模式" />
+		</insert>
+	</changeSet>
+	<changeSet author="apple (generated)" id="1544089876732-15">
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="4028800367773dfc0167773ed6350001" />
+			<column name="RIGHTSNAME" value="权限管理操作" />
+			<column name="RIGHTSKEY" value="RIGHTS_O" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="402880036772120501677214f4840001" />
+			<column name="RIGHTSNAME" value="所有操作权限" />
+			<column name="RIGHTSKEY"
+				value="MANAGE_O,VERIFY_O_ADD,VERIFY_O_UPDATE,VERIFY_O_MANAGER,VERIFY_O_DEVICE,VERIFY_O_CLEAR,VERIFY_O_YUNYING,VERIFY_O_FINANCIAL,RIGHTS_O" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="402880036777d417016777e317d1000b" />
+			<column name="RIGHTSNAME" value="审核可操作新增" />
+			<column name="RIGHTSKEY" value="VERIFY_O_ADD" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="402880036777d417016777e3bbab000c" />
+			<column name="RIGHTSNAME" value="审核可操作修改" />
+			<column name="RIGHTSKEY" value="VERIFY_O_UPDATE" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="40288003677806590167781f4758001b" />
+			<column name="RIGHTSNAME" value="审核只读" />
+			<column name="RIGHTSKEY" value="VERIFY_R" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="40288003677806590167781ff946001d" />
+			<column name="RIGHTSNAME" value="商户管理只读" />
+			<column name="RIGHTSKEY" value="MANAGE_R" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="402880036778065901677820c756001f" />
+			<column name="RIGHTSNAME" value="权限只读" />
+			<column name="RIGHTSKEY" value="RIGHTS_R" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="402880036777d417016777d7a5820004" />
+			<column name="RIGHTSNAME" value="所有审核操作" />
+			<column name="RIGHTSKEY"
+				value="VERIFY_O_ADD,VERIFY_O_UPDATE,VERIFY_O_MANAGER,VERIFY_O_DEVICE,VERIFY_O_CLEAR,VERIFY_O_YUNYING,VERIFY_O_FINANCIAL" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="402880036778065901677809a9900008" />
+			<column name="RIGHTSNAME" value="审核可操作设备" />
+			<column name="RIGHTSKEY" value="VERIFY_O_DEVICE" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="4028800367780659016778097c830007" />
+			<column name="RIGHTSNAME" value="审核可操作经理" />
+			<column name="RIGHTSKEY" value="VERIFY_O_MANAGER" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="ff80808166811d2c0166811e40450002" />
+			<column name="RIGHTSNAME" value="商户管理操作" />
+			<column name="RIGHTSKEY" value="MANAGE_O" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="402880036778065901677809cd000009" />
+			<column name="RIGHTSNAME" value="审核可操作结算" />
+			<column name="RIGHTSKEY" value="VERIFY_O_CLEAR" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="402880036778065901677809f6d0000a" />
+			<column name="RIGHTSNAME" value="审核可操作运营" />
+			<column name="RIGHTSKEY" value="VERIFY_O_YUNYING" />
+		</insert>
+		<insert tableName="SYS_RIGHTS">
+			<column name="RIGHTSID" value="40288003677806590167780a3a5f000b" />
+			<column name="RIGHTSNAME" value="审核可操作财务" />
+			<column name="RIGHTSKEY" value="VERIFY_O_FINANCIAL" />
+		</insert>
+	</changeSet>
+	<changeSet author="apple (generated)" id="1544089876732-16">
+		<insert tableName="SYS_USER">
+			<column name="ID" value="4028800367773dfc0167773feb110002" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="权限操作管理员" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="1111111" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 11:25:36" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="4028800367773dfc0167773ed6350001" />
+			<column name="USERRIGHTSNAME" value="权限管理操作" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="1" />
+			<column name="DEPARTMENTNAME" value="系统运营部" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="402880036739f8cc01673a23fb280010" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="张华" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="18811049108" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="tester" />
+			<column name="CREATEDATE" value="2018-11-22 14:38:15" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="ff80808166811d2c0166811e40450002" />
+			<column name="USERRIGHTSNAME" value="商户管理操作" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="2" />
+			<column name="DEPARTMENTNAME" value="智汇公司" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003675d7d1101675d7d79cc0001" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="马爱莉" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="13991824893" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="alice" />
+			<column name="CREATEDATE" value="2018-11-29 11:22:43" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036772120501677214f4840001" />
+			<column name="USERRIGHTSNAME" value="所有操作权限" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="1" />
+			<column name="DEPARTMENTNAME" value="系统运营部" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003677806590167781fa56d001c" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="审核只读用户" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="1010101" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 15:29:59" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="40288003677806590167781f4758001b" />
+			<column name="USERRIGHTSNAME" value="审核只读" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="5" />
+			<column name="DEPARTMENTNAME" value="维保部" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003677806590167782068c2001e" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="商户管理只读用户" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="1212121" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 15:30:49" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="40288003677806590167781ff946001d" />
+			<column name="USERRIGHTSNAME" value="商户管理只读" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="4" />
+			<column name="DEPARTMENTNAME" value="营业部对公" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="4028800367780659016778210fab0020" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="权限只读用户" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="1313131" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 15:31:31" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036778065901677820c756001f" />
+			<column name="USERRIGHTSNAME" value="权限只读" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="4" />
+			<column name="DEPARTMENTNAME" value="营业部对公" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003675d7d1101675d7ee2f80003" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="tester" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="1234567" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="maaili" />
+			<column name="CREATEDATE" value="2018-11-29 11:24:15" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036772120501677214f4840001" />
+			<column name="USERRIGHTSNAME" value="所有操作权限" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="2" />
+			<column name="DEPARTMENTNAME" value="智汇公司" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003675d7d1101675d8047c60004" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="爱丽丝" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="987654321" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="maaili" />
+			<column name="CREATEDATE" value="2018-11-29 11:25:47" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036772120501677214f4840001" />
+			<column name="USERRIGHTSNAME" value="所有操作权限" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="3" />
+			<column name="DEPARTMENTNAME" value="支付结算部" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003675d7d1101675d8406c70008" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="superadmin" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="15512341231" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="maaili" />
+			<column name="CREATEDATE" value="2018-11-29 11:29:52" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036772120501677214f4840001" />
+			<column name="USERRIGHTSNAME" value="所有操作权限" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="4" />
+			<column name="DEPARTMENTNAME" value="营业部对公" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003677c336e01677c3a06d10003" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="商户管理用户" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="1414141" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-05 10:37:16" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="ff80808166811d2c0166811e40450002" />
+			<column name="USERRIGHTSNAME" value="商户管理操作" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="2" />
+			<column name="DEPARTMENTNAME" value="智汇公司" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="402880036778065901677807e3df0003" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="审核修改管理员" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="4444444" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="权限操作管理员" />
+			<column name="CREATEDATE" value="2018-12-04 15:04:02" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036777d417016777e3bbab000c" />
+			<column name="USERRIGHTSNAME" value="审核可操作修改" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="2" />
+			<column name="DEPARTMENTNAME" value="智汇公司" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="402880036777d417016777d82cf00005" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="审核操作管理员" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="2222222" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 14:11:55" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036777d417016777d7a5820004" />
+			<column name="USERRIGHTSNAME" value="所有审核操作" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="1" />
+			<column name="DEPARTMENTNAME" value="系统运营部" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="4028800367780659016778076ca90002" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="审核新增管理员" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="3333333" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="权限操作管理员" />
+			<column name="CREATEDATE" value="2018-12-04 15:03:31" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036777d417016777e317d1000b" />
+			<column name="USERRIGHTSNAME" value="审核可操作新增" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="2" />
+			<column name="DEPARTMENTNAME" value="智汇公司" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003677806590167780ab87f000c" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="审核经理管理员" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="5555555" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 15:07:07" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="4028800367780659016778097c830007" />
+			<column name="USERRIGHTSNAME" value="审核可操作经理" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="2" />
+			<column name="DEPARTMENTNAME" value="智汇公司" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003677806590167780b0bc4000d" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="审核设备管理员" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="6666666" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 15:07:29" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036778065901677809a9900008" />
+			<column name="USERRIGHTSNAME" value="审核可操作设备" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="5" />
+			<column name="DEPARTMENTNAME" value="维保部" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003677806590167780bd432000e" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="审核结算管理员" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="7777777" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 15:08:20" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036778065901677809cd000009" />
+			<column name="USERRIGHTSNAME" value="审核可操作结算" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="3" />
+			<column name="DEPARTMENTNAME" value="支付结算部" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003677806590167780c5746000f" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="审核运营管理员" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="8888888" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 15:08:53" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="402880036778065901677809f6d0000a" />
+			<column name="USERRIGHTSNAME" value="审核可操作运营" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="1" />
+			<column name="DEPARTMENTNAME" value="系统运营部" />
+		</insert>
+		<insert tableName="SYS_USER">
+			<column name="ID" value="40288003677806590167780cca3a0010" />
+			<column name="USERNAME" />
+			<column name="PASSWORD" value="e10adc3949ba59abbe56e057f20f883e" />
+			<column name="REALNAME" value="审核财务管理员" />
+			<column name="AGE" valueNumeric="0" />
+			<column name="PHONE" value="9999999" />
+			<column name="ADDRESS" />
+			<column name="LOGINIP" />
+			<column name="LOGINDATE" />
+			<column name="CREATEBY" value="爱丽丝" />
+			<column name="CREATEDATE" value="2018-12-04 15:09:23" />
+			<column name="EMAIL" />
+			<column name="SEX" valueNumeric="0" />
+			<column name="USERRIGHTSID" value="40288003677806590167780a3a5f000b" />
+			<column name="USERRIGHTSNAME" value="审核可操作财务" />
+			<column name="STATUS" value="0" />
+			<column name="DEPARTMENT" value="3" />
+			<column name="DEPARTMENTNAME" value="支付结算部" />
+		</insert>
+	</changeSet>
+	<changeSet author="zyl" id="delete-example">
+		<delete tableName="SYS_USER">
+			<where>ID="40288003677806590167780cca3a0010"</where>
+		</delete>
+	</changeSet>
+	<changeSet author="zyl" id="delete-example2">
+		<delete tableName="SYS_USER">
+			<where>ID="40288003677806590167780c5746000f"</where>
+		</delete>
+		<!-- 执行后剩余16条记录 -->
+	</changeSet>
+	<changeSet author="zyl" id="delete-example2">
+		<delete tableName="SYS_USER">
+			<where>ID="40288003677806590167780bd432000e"</where>
+		</delete>
+		<!-- 执行后剩余15条记录 -->
+	</changeSet>
+</databaseChangeLog>
